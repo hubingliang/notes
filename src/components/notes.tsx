@@ -82,7 +82,7 @@ const Note: React.FC<{ note: string }> = ({ note }) => {
         random() && sound2.play();
       }
     });
-  }, []);
+  }, [sound1, sound2]);
   return (
     <PlayerBox>
       <span
@@ -95,9 +95,6 @@ const Note: React.FC<{ note: string }> = ({ note }) => {
       >
         {note}
       </span>
-      {/* <audio src={audioPath} autoPlay /> */}
-
-      {/* {<audio src={audioPathExtra} autoPlay />} */}
     </PlayerBox>
   );
 };
@@ -144,11 +141,7 @@ export const Player: React.FC<{ bpm: number; playing: Boolean }> = ({
   playing,
 }) => {
   if (playing) {
-    return (
-      <>
-        <Playing bpm={bpm} />
-      </>
-    );
+    return <Playing bpm={bpm} />;
   }
   return <Paused />;
 };
