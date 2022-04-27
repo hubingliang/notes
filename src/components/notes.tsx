@@ -88,7 +88,7 @@ const Note: React.FC<{ note: string }> = ({ note }) => {
         random() && sound2.play();
       }
     });
-  }, [sound1Callback, sound2Callback]);
+  }, []);
   return (
     <PlayerBox>
       <span
