@@ -1,6 +1,6 @@
 import { join } from "path";
 import { CSSProperties, useEffect, useState } from "react";
-import { Howl, Howler } from "howler";
+import { Howl } from "howler";
 
 export function CSSCenterFlex(
   flexDirection: "column" | "row" = "column"
