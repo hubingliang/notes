@@ -1,5 +1,5 @@
 import { join } from "path";
-import { CSSProperties, useCallback, useEffect, useState } from "react";
+import { CSSProperties, useEffect, useState } from "react";
 import { Howl } from "howler";
 
 export function CSSCenterFlex(
@@ -74,20 +74,13 @@ const Note: React.FC<{ note: string }> = ({ note }) => {
   var sound2 = new Howl({
     src: [audioPathExtra],
   });
-  var sound2Callback = useCallback(() => {
-    return sound2;
-  }, [sound2]);
-  var sound1Callback = useCallback(() => {
-    return sound1;
-  }, [sound1]);
 
   useEffect(() => {
     sound1.play();
     sound1.on("end", function () {
-      {
-        random() && sound2.play();
-      }
+      random() && sound2.play();
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <PlayerBox>
