@@ -1,6 +1,5 @@
 {
   "name": "notes",
-  "homepage": "https://starliiit.github.io/notes",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
