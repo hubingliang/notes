@@ -16,5 +16,8 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src/App.tsx"]
+  "include": ["src/App.tsx"],
+  "linterOptions": {
+    "exclude": ["*"]
+  }
 }
